@@ -167,13 +167,12 @@ public class TextExtractor {
 				System.out.println(textLine.getLineHtml());
 				Element bodyElement = Jsoup.parse(textLine.getLineHtml()).body();
 				if(startPattern.matcher(bodyElement.html().trim()).matches() || endPattern.matcher(bodyElement.html().trim()).matches()){
-					bodyElement.html("<span class='x-boilerpipe-mark1'>"+bodyElement.html()+"<span>");
-					System.out.println("--->"+bodyElement.outerHtml());
+					bodyElement.html("<span class='x-niqingyang-mark1'>"+bodyElement.html()+"<span>");
 				}else{
 					for (Element element : bodyElement.children()) {
 //						System.out.println(element.outerHtml());
 						//element.addClass("x-boilerpipe-mark1");
-						element.html("<span class='x-boilerpipe-mark1'>"+element.html()+"<span>");
+						element.html("<span class='x-niqingyang-mark1'>"+element.html()+"<span>");
 					}
 				}
 				htmlLines.set(textLine.getLineNumber(), bodyElement.html());
