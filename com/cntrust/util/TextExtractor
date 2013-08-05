@@ -63,8 +63,6 @@ public class TextExtractor {
 	 * 
 	 * @param html
 	 *            网页HTML字符串
-	 * @param flag
-	 *            true进行主题类判断, 省略此参数则默认为false
 	 * 
 	 * @return 网页正文string
 	 */
@@ -208,9 +206,11 @@ public class TextExtractor {
 
 	public class TextLine {
 
+		// 相对于原始网页的行号
 		private int lineNumber = 0;
 		// 行内容,未经处理过的带标签的行
 		private String lineHtml = null;
+		// 去除标签后的html文本
 		private String lineText = null;
 		// 判断是否为内容
 		private boolean isContent = false;;
