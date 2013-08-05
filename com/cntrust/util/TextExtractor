@@ -104,7 +104,6 @@ public class TextExtractor {
 		int start = -1;
 		int end = -1;
 		boolean boolstart = false, boolend = false;
-		StringBuilder text = new StringBuilder();
 
 		for (int i = 0; i < indexDistribution.size() - 1; i++) {
 			if (indexDistribution.get(i) > threshold && !boolstart) {
@@ -135,7 +134,6 @@ public class TextExtractor {
 				if (str.contains("Copyright") || str.contains("版权所有")) {
 					continue;
 				}
-				text.append(str);
 				for (int j = 0; j < tempList.size(); j++) {
 					lines.get(tempList.get(j)).setContent(true);
 				}
