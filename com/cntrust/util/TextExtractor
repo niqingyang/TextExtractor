@@ -40,7 +40,7 @@ public class TextExtractor {
 	}
 
 	/**
-	 * 提取正文，判断传入HTML，若是主题类网页，则抽取正文；否则输出<b>"unkown"</b>。
+	 * 提取正文，判断传入HTML，若是主题类网页，则抽取正文
 	 * 
 	 * @param html
 	 *            网页HTML字符串
@@ -62,7 +62,7 @@ public class TextExtractor {
 	/**
 	 * 高亮显示
 	 * @param html 网页原文
-	 * @return
+	 * @return 加入高亮显示后的网页原文
 	 */
 	public String highLighter(String html) {
 		
